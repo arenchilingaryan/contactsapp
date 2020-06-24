@@ -6,7 +6,7 @@ node-sass
 redux
 
 
-## UI Frameworks:
+## UI Framework:
 
 antd
 ant-design/icons
