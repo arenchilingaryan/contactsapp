@@ -1,0 +1,42 @@
+
+.contacts__item {
+  list-style-type: none;
+  width: 500px;
+  padding: 5px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 10% 10%;
+  align-items: center;
+  animation: itemMount ease-in .3s;
+  .contact__name {
+    font-size: 20px;
+  }
+}
+
+.contacts__icon-delete {
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+  &:hover {
+    color: tomato;
+  }
+}
+
+.contacts__icon-edit {
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+  &:hover {
+    color: black;
+  }
+}
+
+@keyframes itemMount {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

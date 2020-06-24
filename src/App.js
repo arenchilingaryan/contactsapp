@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Route, Redirect } from 'react-router-dom'
+import LoginPage from './components/auth/login'
+import RegisterPage from './components/auth/register'
+import ContactsPage from './components/contacts/contacts'
+import Header from './components/header/header'
+import SelectButtons from './components/auth/select-buttons'
+import { connect } from 'react-redux'
 
-function App() {
+function App(props) {
+  if (props.user.name) {
+    return (
+      <div className="App">
+        <Header />
+        <Route path="/contacts" component={ContactsPage} />
+        <Redirect to="/contacts" />
+      </div>
+    )
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Route exact path="/" component={SelectButtons} />
+      <Route path="/login" component={LoginPage} />
+      <Route path="/register" component={RegisterPage} />
+      <Redirect to="/" />
     </div>
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return {
+    user: state.user
+  }
+}
+
+export default connect(mapStateToProps)(App)

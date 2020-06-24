@@ -1,0 +1,36 @@
+
+.contacts__icon-plus {
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 30px;
+  &:hover {
+    transform: scale(1.2) rotate(15deg);
+    color: #1890ff;
+  }
+}
+
+.contacts__add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 10%;
+  background: white;
+  transform-origin: bottom;
+  animation: addMount ease-in-out 0.5s;
+  z-index: 1;
+
+}
+
+@keyframes addMount {
+  0% {
+    transform: perspective(500px) rotateX(90deg);
+  }
+  100% {
+    transform: perspective(500px) rotateX(0deg);
+  }
+}

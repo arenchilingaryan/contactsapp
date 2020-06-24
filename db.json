@@ -1,0 +1,109 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "psina",
+      "password": "111111",
+      "contacts": []
+    },
+    {
+      "id": "2",
+      "name": "sad",
+      "password": "222222",
+      "contacts": []
+    },
+    {
+      "id": "3",
+      "name": "johnson",
+      "password": "333333",
+      "contacts": []
+    },
+    {
+      "id": "4",
+      "name": "alice",
+      "password": "444444"
+    },
+    {
+      "id": "5",
+      "name": "valentine",
+      "password": "555555",
+      "contacts": []
+    },
+    {
+      "id": "6",
+      "name": "broke ass niBBa",
+      "password": "666666",
+      "contacts": []
+    },
+    {
+      "id": "ghMBP61",
+      "name": "luha",
+      "password": "tajik",
+      "contacts": []
+    },
+    {
+      "id": "OJ3XCJj",
+      "name": "radik",
+      "password": "111",
+      "contacts": []
+    }
+  ],
+  "contacts": [
+    {
+      "id": "2",
+      "name": "sobaken",
+      "contactName": "john",
+      "contactAge": "25",
+      "phone": "1231231231",
+      "edit": false
+    },
+    {
+      "id": "3",
+      "name": "john",
+      "contactName": "www",
+      "contactAge": "2522",
+      "phone": "1231231231",
+      "edit": false
+    },
+    {
+      "name": "alice",
+      "id": "Pp-xd5G",
+      "contactName": "a",
+      "contactAge": "a",
+      "phone": "a",
+      "edit": false
+    },
+    {
+      "name": "alice",
+      "id": "mHMOztG",
+      "contactName": "c",
+      "contactAge": "c",
+      "phone": "c",
+      "edit": false
+    },
+    {
+      "name": "alice",
+      "id": "n6IDCBg",
+      "contactName": "d",
+      "contactAge": "d",
+      "phone": "d",
+      "edit": false
+    },
+    {
+      "name": "alice",
+      "id": "ZfQSJCg",
+      "contactName": "f",
+      "contactAge": "f",
+      "phone": "f",
+      "edit": false
+    },
+    {
+      "name": "alice",
+      "id": "p5DbMr3",
+      "contactName": "h",
+      "contactAge": "h",
+      "phone": "h",
+      "edit": false
+    }
+  ]
+}
