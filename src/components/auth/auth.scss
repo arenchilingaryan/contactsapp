@@ -1,3 +1,49 @@
+@mixin buttonEllem {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+@mixin button {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 35px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s;
+  &:before {
+    @include buttonEllem;
+    
+    color: white;
+    background: #1890ff;
+  }
+  &:after {
+    @include buttonEllem;
+    color: white;
+    background: #52c41a;
+  }
+  &:hover {
+    transform: scale(1.2);
+    &:before {
+      opacity: 1;
+      transition: 0.5s;
+    }
+    &:after {
+      opacity: 1;
+      transition: 0.5s;
+    }
+  }
+}
+
 .auth__wrapper {
   width: 400px;
   height: 500px;
@@ -13,110 +59,40 @@
   display: flex;
   justify-content: center;
 }
-.select__button {
-  background: none;
-  border: none;
-  outline: none;
-  width: 100px;
-  height: 35px;
-  border: 1px solid #ccc;
-  transition: transform .3s;
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.2);
-  }
-}
+
 .select__login {
-  position: relative;
+  @include button;
   transform: rotate(20deg) translate(-50px);
-  transition: all .5s;
-  &:before {
-    position: absolute;
-    content: "Login";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    color: white;
-    background: #1890ff;
-  }
+  &:before,
   &:after {
-    position: absolute;
     content: "Login";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    color: white;
-    background: #52c41a;
   }
   &:hover {
     &:before {
-      opacity: 1;
       left: 5px;
       top: 5px;
-      transition: .5s;
     }
     &:after {
-      opacity: 1;
       left: 10px;
       top: 10px;
-      transition: .5s;
     }
   }
 }
 .select__register {
-  position: relative;
+  @include button;
   transform: rotate(-20deg) translate(50px);
-  transition: all .5s;
-  &:before {
-    position: absolute;
-    content: "Register";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    color: white;
-    background: #1890ff;
-  }
+  &:before,
   &:after {
-    position: absolute;
     content: "Register";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    color: white;
-    background: #52c41a;
   }
   &:hover {
     &:before {
-      opacity: 1;
       left: -5px;
       top: 5px;
-      transition: .5s;
     }
     &:after {
-      opacity: 1;
       left: -10px;
       top: 10px;
-      transition: .5s;
     }
   }
 }

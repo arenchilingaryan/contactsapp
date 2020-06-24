@@ -21,7 +21,8 @@ function RegisterPage(props) {
   }
 
   const registerHandler = async () => {
-    const candidate = await axios.get(`http://localhost:5000/users?name=${form.username}&password=${form.password}`)
+    const { username, password } = form
+    const candidate = await axios.get(`http://localhost:5000/users?name=${username}&password=${password}`)
     if (candidate.data.length) {
       return setError(true)
     }
